@@ -6,7 +6,7 @@ public class StringArrayComparator implements Comparator<String[]>{
 
     Integer sortNum;
 
-    public StringArrayComparator(Integer index) {
+    public StringArrayComparator(Integer index) {  //cons
            sortNum = index;
     }
 

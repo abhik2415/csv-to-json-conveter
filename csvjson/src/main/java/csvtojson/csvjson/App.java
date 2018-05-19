@@ -11,12 +11,14 @@ import org.json.simple.JSONObject;
 
 import com.opencsv.CSVReader;
 
+
+
 public class App {
 
     public static void main(String[] args) {
 
-        String csvFile = "c:/modified_cold_storage_sample.csv";
-        String jsonfile=  "c:/Users/Abhik/Desktop/output.json";
+        String csvFile ="C:/Users/ddas109/Documents/CSVTOJASON_Code/modified_cold_storage_sample.csv";
+        String jsonfile="C:/Users/ddas109/Documents/CSVTOJASON_Code/output.json";
 
         CSVReader reader = null;
         try {
@@ -24,7 +26,7 @@ public class App {
             List<String[]> all= reader.readAll();
             all=all.subList(1, all.size());
             
-            Collections.sort(all, new StringArrayComparator(11));
+            Collections.sort(all, new StringArrayComparator(11));  //call from here
             JSONObject jsonobj = new JSONObject();
             JSONArray customer_id = new JSONArray();
             JSONArray customer_location = new JSONArray();
